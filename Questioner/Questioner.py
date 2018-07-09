@@ -1,18 +1,30 @@
-import random, os, sys
+from os import path
+from random import randint
+from sys import argv
 
-file = open(os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), "Frasi"), 'r',)
-content = list()
-used = list()
+listName = "List.l"
 
-for line in file.readlines():
-    content.append(line)
+currentPath = path.dirname(path.realpath(argv[0]))
 
-s = ""
+cfgPath = path.join(currentPath, "QuestionerCFG.cfg")
 
-while s != "exit":
-    s = input("Exit to exit or Submit to continue") 
-    i = random.randint(0,len(content) - 1)
-    while used.count(i) != 0:
-        i = random.randint(0,len(content) - 1)
+if path.exists(path.join(currentPath, listName)) != True:
+    print("There is not any list")
+
+listPath = open(path.join(currentPath, listName), "r")
+
+content = listPath.readlines()
+
+with open(cfgPath, "a+") as cfgFile:
+    used = cfgFile.readlines()
+
+
+while True:
+    input("Exit to exit or Submit to continue") 
+    i = randint(0,len(content) - 1)
+    while used.count(str(i)) != 0:
+        i = randint(0,len(content) - 1)
     print(content[i])
-    used.append(i)
+    used.append(str(i))
+    with open(cfgPath, "a+") as cfgFile:
+        cfgFile.write(str(i) + "\n")
