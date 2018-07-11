@@ -123,8 +123,7 @@
 1) Premesse del modello cinetico e sue conseguenze
 2) Calcolo della pressione nella teoria cinetica dei gas e definizione del significato microscopico (cinetico) di temperatura
 3) Descrizione del principio di equipartizione dell'energia e definizione dei calori specifici in funzione dei gradi di libertà
-1) Enunciati di Kelvin-Planck e di Clausius del secondo principio della
-termodinamica e dimostrazione dell'equivalenza dei due principi
+1) Enunciati di Kelvin-Planck e di Clausius del secondo principio della termodinamica e dimostrazione dell'equivalenza dei due principi
 2) Enunciato e dimostrazione del Teorema di Carnot
 3) Definizione e calcolo della Temperatura termodinamica assoluta
 4) Dimostrazione del Teorema di Clausius

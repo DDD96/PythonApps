@@ -79,7 +79,7 @@ Label(main, text = "Collana").grid(row = 0, column = 0, padx = 10)
 
 optionList = list(["Topolino", "Disney Big", "Disney Time", "Disney Comics", "I Grandi Classici(II serie)", 
 "Mega Almanacco", "Paperadamus", "Paperinik", "Paperino Mese", "Più Disney", "Speciale Disney", "Super Disney", "Super Miti Mondadori",
-"Topo goal", "Tutto Disney", "I Grandi Classici"])
+"Topo goal", "Tutto Disney", "I Grandi Classici", "I Classici di Walt Disney (II serie)"])
 optionList.sort()
 
 collana = StringVar()

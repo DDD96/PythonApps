@@ -19,7 +19,7 @@ with open(cfgPath, "a+") as cfgFile:
     used = cfgFile.readlines()
 
 
-while True:
+while len(used) != len(content):
     input("Exit to exit or Submit to continue") 
     i = randint(0,len(content) - 1)
     while used.count(str(i)) != 0:
