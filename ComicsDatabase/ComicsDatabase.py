@@ -3,7 +3,7 @@ import os
 
 #Instantiate Panel
 main = Tk(className="Topolino")
-main.geometry("500x250")
+main.geometry("800x250")
 
 #Get Path
 path = os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), "Fumetti.comics")
@@ -79,7 +79,7 @@ Label(main, text = "Collana").grid(row = 0, column = 0, padx = 10)
 
 optionList = list(["Topolino", "Disney Big", "Disney Time", "Disney Comics", "I Grandi Classici(II serie)", 
 "Mega Almanacco", "Paperadamus", "Paperinik", "Paperino Mese", "Più Disney", "Speciale Disney", "Super Disney", "Super Miti Mondadori",
-"Topo goal", "Tutto Disney", "I Grandi Classici", "I Classici di Walt Disney (II serie)"])
+"Topo goal", "Tutto Disney", "I Grandi Classici", "I Classici di Walt Disney (II serie)", "I Miti Mondadori", "Zio Paperone", "Disney Happy"])
 optionList.sort()
 
 collana = StringVar()

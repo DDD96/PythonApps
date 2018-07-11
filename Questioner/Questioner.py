@@ -15,9 +15,10 @@ listPath = open(path.join(currentPath, listName), "r")
 
 content = listPath.readlines()
 
-with open(cfgPath, "a+") as cfgFile:
-    used = cfgFile.readlines()
+used = list()
 
+with open(cfgPath, "r") as cfgFile:
+    used = cfgFile.readlines()
 
 while len(used) != len(content):
     input("Exit to exit or Submit to continue") 
