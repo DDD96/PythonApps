@@ -19,13 +19,18 @@ used = list()
 
 with open(cfgPath, "r") as cfgFile:
     used = cfgFile.readlines()
+    for l in used:
+        i = used.index(l)
+        used[i] =  l.strip()        
 
 while len(used) != len(content):
     input("Exit to exit or Submit to continue") 
     i = randint(0,len(content) - 1)
-    while used.count(str(i)) != 0:
+    while str(i) in used:
         i = randint(0,len(content) - 1)
     print(content[i])
     used.append(str(i))
     with open(cfgPath, "a+") as cfgFile:
         cfgFile.write(str(i) + "\n")
+
+input("Finished")

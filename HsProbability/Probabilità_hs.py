@@ -71,7 +71,7 @@ def CalcProb():
     totPerc.config(text = "Total perc:" + str(round(min(pCommons + pRares + pEpics + pLegendaries, 1)*100,2)) + "%")
 
 
-app = Tk(screenName = "Hs Probability", baseName="Hs Probability", className=" Hs Probability")
+app = Tk(className=" Hs Probability")
 
 
 #Commons Entry

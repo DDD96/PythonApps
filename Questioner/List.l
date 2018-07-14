@@ -54,7 +54,6 @@
 4) Definizione di accelerazione complementare o di Coriolis.
 5) Definizione di sistemi di riferimento inerziali e formule della relatività galileiana.
 6) Definizione di sistemi di riferimento non inerziali e forze apparenti.
-7) Discussione dei seguenti casi particolari:
 - moto di trascinamento rettilineo uniforme: definizione delle trasformazioni galileiane.
 - moto di trascinamento rettilineo accelerato.
 - moto di trascinamento rotatorio uniforme: definizione di Forza centrifuga e forza di Coriolis
