@@ -10,6 +10,9 @@ cfgPath = path.join(currentPath, "QuestionerCFG.cfg")
 
 if path.exists(path.join(currentPath, listName)) != True:
     print("There is not any list")
+if path.exists(cfgPath) != True:
+    f = open(cfgPath, "w+")
+    f.close()
 
 listPath = open(path.join(currentPath, listName), "r")
 
