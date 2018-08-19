@@ -42,11 +42,16 @@ def SortFile():
     evaluationString.set("Sorted")
 
 def AddComic():
+    collana = GetCollana()
+
+    if collana == "":
+        return
+
     if textNum.get().isdigit() == False:
         evaluationString.set("Number must be a DIGIT not " + textNum.get())
         ValidateNumber()
         return
-    
+
     Search()
 
     if evaluationString.get() == "Present":
@@ -58,7 +63,20 @@ def AddComic():
     
     evaluationString.set(collana.get() + "-" + textNum.get() + " ADDED")
 
+def GetCollana():
+    if collana1.get() != "":
+        return collana1
+    elif collana2.get() != "":
+        return collana2
+    else:
+        return ""
+
 def Search():
+    collana = GetCollana()
+
+    if collana == "":
+        return
+
     file = open(path, "r")
     for line in file.readlines():
         series, num = line.split("-")
@@ -77,16 +95,28 @@ def ValidateNumber():
 #First Line
 Label(main, text = "Collana").grid(row = 0, column = 0, padx = 10)
 
-optionList = list(["Topolino", "Disney Big", "Disney Time", "Disney Comics", "I Grandi Classici(II serie)", 
+optionList1 = list(["","Topolino", "Disney Big", "Disney Time", "Disney Comics", "I Grandi Classici(II serie)", 
 "Mega Almanacco", "Paperadamus", "Paperinik", "Paperino Mese", "Più Disney", "Speciale Disney", "Super Disney", "Super Miti Mondadori",
-"Topo goal", "Tutto Disney", "I Grandi Classici", "I Classici di Walt Disney (II serie)", "I Miti Mondadori", "Zio Paperone", "Disney Happy"])
-optionList.sort()
+"Topo goal", "Tutto Disney", "I Grandi Classici", "I Classici di Walt Disney (II serie)", "I Miti Mondadori", "Zio Paperone", "Disney Happy",
+"Le più belle storie Disney", "Le più belle storie Disney special", "Paperstyle", "La Storia Universale Disney", "Capolavori della Letteratura", 
+"Topostorie Disney"])
+optionList1.sort()
 
-collana = StringVar()
-collana.set(optionList[0])
+optionList2 = list(["","Disney Definitive Collection", "Disney Legendary Collection", "I Mitici Disney", "Virtù e difetti a fumetti",
+"Un pieno di avventure", "Topolino Story", "La grande dinastia dei paperi", "L'altro Topo", "Le grandi storie Disney L'opera omnia di Romano Scarpa",
+"Tesori Made in Italy", "Tesori Disney International", "L’economia di Zio Paperone", "The Don Rosa library Zio Paperone & Paperino",
+"Astromondi di Topolino"])
+optionList2.sort()
 
-OptionMenu(main, collana, *optionList).grid(row = 0, column = 1)
+collana1 = StringVar()
+collana1.set(optionList1[1])
 
+OptionMenu(main, collana1, *optionList1).grid(row = 0, column = 1)
+
+collana2 = StringVar()
+collana2.set(optionList2[0])
+
+OptionMenu(main, collana2, *optionList2).grid(row = 0, column = 2)
 
 Label(main, text = "Numero").grid(row = 0, column = 3, padx = 10)
 
@@ -108,7 +138,7 @@ Button(main, text = "Sort", command = SortFile).grid(row = 2, column = 2)
 evaluationString = StringVar()
 evaluationString.set("Not present")
 
-Label(main, textvariable = evaluationString).grid(row = 4, column = 2, pady = 10)
+Label(main, textvariable = evaluationString).grid(row = 3, column = 2, pady = 10)
 
 #Loop
 
