@@ -40,6 +40,11 @@ def CalcProb():
         tRares = 158
         tEpics = 70
         tLegendaries = 31
+    elif cCardSet == "BOOM":
+        tCommons = 98
+        tRares = 72
+        tEpics = 54
+        tLegendaries = 23
     else:
         print("Error: No set")
 
@@ -104,7 +109,7 @@ Entry(app, textvariable = lEntry).grid(row = 3, column = 1)
 
 #Card Set Option
 
-optionList = list(["Classic", "GvG", "TGT", "Gods", "MSG", "UNG", "KFT", "KaC", "TW"])
+optionList = list(["Classic", "GvG", "TGT", "Gods", "MSG", "UNG", "KFT", "KaC", "TW", "BOOM"])
 
 sEntry = StringVar()
 sEntry.set(optionList[0])
