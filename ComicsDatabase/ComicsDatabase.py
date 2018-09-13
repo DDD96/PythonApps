@@ -105,7 +105,7 @@ optionList1.sort()
 optionList2 = list(["","Disney Definitive Collection", "Disney Legendary Collection", "I Mitici Disney", "Virtù e difetti a fumetti",
 "Un pieno di avventure", "Topolino Story", "La grande dinastia dei paperi", "L'altro Topo", "Le grandi storie Disney L'opera omnia di Romano Scarpa",
 "Tesori Made in Italy", "Tesori Disney International", "L’economia di Zio Paperone", "The Don Rosa library Zio Paperone & Paperino",
-"Astromondi di Topolino", "Disney Comix", "Paperdinastia (Giunti)"])
+"Astromondi di Topolino", "Disney Comix", "Paperdinastia (Giunti)", "I Classici della Letteratura", "I Classici della Letteratura (2a edizione)"])
 optionList2.sort()
 
 collana1 = StringVar()
