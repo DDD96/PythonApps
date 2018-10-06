@@ -10,7 +10,7 @@ path = os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), "Fumetti.com
 
 def SortFile():
     lines = dict()
-    
+
     file = open(path, "r")
     #Make dictionary (Series, List(Number))
     for line in file.readlines():
@@ -60,7 +60,7 @@ def AddComic():
     file = open(path,"a")
     file.write(collana.get() + "-" + textNum.get() + "\n")
     file.close()
-    
+
     evaluationString.set(collana.get() + "-" + textNum.get() + " ADDED")
 
 def GetCollana():
@@ -95,17 +95,18 @@ def ValidateNumber():
 #First Line
 Label(main, text = "Collana").grid(row = 0, column = 0, padx = 10)
 
-optionList1 = list(["","Topolino", "Disney Big", "Disney Time", "Disney Comics", "I Grandi Classici(II serie)", 
+optionList1 = list(["","Topolino", "Disney Big", "Disney Time", "Disney Comics", "I Grandi Classici(II serie)",
 "Mega Almanacco", "Paperadamus", "Paperinik", "Paperino Mese", "Più Disney", "Speciale Disney", "Super Disney", "Super Miti Mondadori",
 "Topo goal", "Tutto Disney", "I Grandi Classici", "I Classici di Walt Disney (II serie)", "I Miti Mondadori", "Zio Paperone", "Disney Happy",
-"Le più belle storie Disney", "Le più belle storie Disney special", "Paperstyle", "La Storia Universale Disney", "Capolavori della Letteratura", 
+"Le più belle storie Disney", "Le più belle storie Disney special", "Paperstyle", "La Storia Universale Disney", "Capolavori della Letteratura",
 "Topostorie Disney"])
 optionList1.sort()
 
 optionList2 = list(["","Disney Definitive Collection", "Disney Legendary Collection", "I Mitici Disney", "Virtù e difetti a fumetti",
 "Un pieno di avventure", "Topolino Story", "La grande dinastia dei paperi", "L'altro Topo", "Le grandi storie Disney L'opera omnia di Romano Scarpa",
 "Tesori Made in Italy", "Tesori Disney International", "L’economia di Zio Paperone", "The Don Rosa library Zio Paperone & Paperino",
-"Astromondi di Topolino", "Disney Comix", "Paperdinastia (Giunti)", "I Classici della Letteratura", "I Classici della Letteratura (2a edizione)"])
+"Astromondi di Topolino", "Disney Comix", "Paperdinastia (Giunti)", "I Classici della Letteratura", "I Classici della Letteratura (2a edizione)",
+"Zio Paperone (Panini)"])
 optionList2.sort()
 
 collana1 = StringVar()
