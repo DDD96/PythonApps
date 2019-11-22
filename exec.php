@@ -1,3 +1,3 @@
 <?php
-  echo file_get_contents("login.php");
+  show_source("login.php");
 ?>
