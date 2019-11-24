@@ -1,3 +1,3 @@
 <?php
-  show_source("login.php");
+  show_source("index.php");
 ?>
